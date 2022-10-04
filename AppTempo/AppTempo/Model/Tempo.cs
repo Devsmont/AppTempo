@@ -16,13 +16,13 @@ namespace AppTempo.Model
 
         public Tempo()
         {
-            this.Titulo = "";
-            this.Temperatura = "";
-            this.Vento = "";
-            this.Umidade = "";
-            this.Visibilidade = "";
-            this.NascerSol = "";
-            this.PorSol = "";
+            this.Titulo = " ";
+            this.Temperatura = " ";
+            this.Vento = " ";
+            this.Umidade = " ";
+            this.Visibilidade = " ";
+            this.NascerSol = " ";
+            this.PorSol = " ";
         }
 
     }

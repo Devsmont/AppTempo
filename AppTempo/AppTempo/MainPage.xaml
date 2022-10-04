@@ -1,24 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
              x:Class="AppTempo.MainPage">
-
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="AliceBlue">
+                <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+                    <Label Text="Procurar Cidade" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
+                    <Label x:Name="cidadeLabel" Text="Digite o nome da cidade"  TextColor="Red" FontSize="Small"/>
+                    <Entry x:Name="cidadeEntry"/>
+                </StackLayout>
+                <StackLayout Padding="0,0,0,10" VerticalOptions="End"/>
+                <Button x:Name="btnPrevisao" Text="Previsao do Tempo" WidthRequest="185"
+                           BorderWidth="1" Clicked="btnPrevisao_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Padding="10,10,10,10" HorizontalOptions="Start" BackgroundColor="AliceBlue">
+            <Image x:Name="imgTempo" />
+            <Label Text="Local" />
+            <Label Text="{Binding Titulo}" TextColor="Black" />
+            <Label Text="Temperatura" />
+            <Label x:Name="tempLabel" TextColor="Black" Text="{Binding Temperatura}"/>
+            <Label Text="V.Vento" />
+            <Label x:Name="windLabel" TextColor="Black" Text="{Binding Vento}" />
+            <Label Text="Humidade" />
+            <Label x:Name="HumydityLabel" TextColor="Black" Text="{Binding Umidade}"/>
+            <Label Text="Visibilidade" />
+            <Label x:Name="VisibilityLabel" TextColor="Black" Text="{Binding Visibilidade}"/>
+            <Label Text="Hora Nascer do Sol" />
+            <Label x:Name="SunriseLabel" TextColor="Black" Text="{Binding NascerSol}"/>
+            <Label Text="Hora Pôr do Sol" />
+            <Label x:Name="SunsetLabel" TextColor="Black" Text="{Binding PorSol}"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
